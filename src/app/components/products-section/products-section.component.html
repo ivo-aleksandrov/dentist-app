@@ -1,0 +1,33 @@
+<br><br><br>
+<div class="page-title">
+    <p>Предлагани продукти</p>
+</div>
+<br>
+<hr class="my-7">
+<br>
+<div class="container">
+    <div class="row">
+                <div *ngFor="let tempProduct of products" class="col-md">
+                    <br>
+                    <div class="product-box">
+
+                        <a routerLink="/products/{{ tempProduct.id }}">
+                            <img src="../../../assets/{{ tempProduct.imageUrl }}" class="img-responsive" width="60%" />
+                        </a>
+                        <br />
+                        <a routerLink="/products/{{ tempProduct.id }}">
+                            <h2>{{ tempProduct.name }}</h2>
+                        </a>
+
+                        <div class="price">{{ tempProduct.unitPrice | currency:'BGN' }}</div>
+                        <br>
+                        <a href="#" class="asdasd">Купи</a>
+                    </div>
+                </div>
+                <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+                    No products found.
+                </div>
+    </div>
+</div>
+<br><br><br>
+

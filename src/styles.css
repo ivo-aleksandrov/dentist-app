@@ -1,1 +1,255 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #dc2271;
+}
+
+a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #b6195a;
+}
+
+a:hover{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #b6195a;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+.products{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.parent-nav{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    z-index: 2;
+}
+
+nav{
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.logo{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #dc2271;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.nav-links{
+    display: flex;
+    font-family: 'Arimo', sans-serif;
+    color: #dc2271;
+    justify-content: space-around;
+    width: 35%;
+    margin-top: 20px;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    font-family: 'Arimo', sans-serif;
+    color: #dc2271;
+    text-decoration: none;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #dc2271;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.phone{
+    display: flex;
+    align-items: center;
+}
+
+
+.carousel-caption{
+    top: 15%;
+    right: 50%;
+}
+
+.carousel-caption .h1-responsive{
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1024px){
+    .nav-links{
+        width: 60%;
+    }
+
+    .phone{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 50vh;
+        width: 100%;
+        background: white;
+        z-index: 4;
+        top: 7vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .phone{
+        display: none;
+    }
+
+    .carousel-caption .h1-responsive{
+        font-size: 15px;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.carousel-inner {
+    max-height: 500px;
+  }
+
+.carousel-indicators li { 
+    visibility: hidden; 
+}
+
+/* Underline From Left */
+.hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #dc2271;
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+    right: 0;
+  }
+
+  .my-5{
+      width: 230px;
+  }
+
+  .services-macros{
+      height: 50px;
+      width: 320px;
+      display: flex;
+      align-items: center;
+  }
+
+  .service-descr{
+      width: 340px;
+      height: 50px;
+  }
+
+  .services-macros a{
+      font-size: 20px;
+  }
+
+  .page-title{
+    width: 100%;
+    font-size: 35px; 
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  thead{
+      background:  #dc2271;
+      color: white;
+  }
+
+  .table-responsive{
+    align-items: center;
+    width: 700px;
+  }

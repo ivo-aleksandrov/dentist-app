@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dentist-webpage';
+
+  @ViewChild('carousel', { static: true }) public el: any;
+
+  @HostListener('swipeleft', ['$event']) public swipePrev(event: any) {
+      this.el.previousSlide();
+  }
+
+  @HostListener('swiperight', ['$event']) public swipeNext(event: any) {
+      this.el.nextSlide();
+  }
+  
 }
